@@ -1,0 +1,72 @@
+$ locale
+       LANG=en_US.UTF-8
+       LC_CTYPE="en_US.UTF-8"
+       LC_NUMERIC="en_US.UTF-8"
+       LC_TIME="en_US.UTF-8"
+       LC_COLLATE="en_US.UTF-8"
+       LC_MONETARY="en_US.UTF-8"
+       LC_MESSAGES="en_US.UTF-8"
+       LC_PAPER="en_US.UTF-8"
+       LC_NAME="en_US.UTF-8"
+       LC_ADDRESS="en_US.UTF-8"
+       LC_TELEPHONE="en_US.UTF-8"
+       LC_MEASUREMENT="en_US.UTF-8"
+       LC_IDENTIFICATION="en_US.UTF-8"
+       LC_ALL=
+
+ $ locale date_fmt
+ %a %b %e %H:%M:%S %Z %Y
+
+ $ locale -k date_fmt
+ date_fmt="%a %b %e %H:%M:%S %Z %Y"
+
+ $ locale -ck date_fmt
+ LC_TIME
+ date_fmt="%a %b %e %H:%M:%S %Z %Y"
+
+========================================================================
+https://askubuntu.com/questions/1064167/how-can-i-change-the-default-date-format-using-lc-time
+========================================================================
+sous R (R est francais, par défaut LC_TIME est en francais
+    > Sys.getlocale()
+                                            [1] "LC_CTYPE=fr_FR.UTF-8;LC_NUMERIC=C;LC_TIME=fr_FR.UTF-8;
+                                            LC_COLLATE=fr_FR.UTF-8;LC_MONETARY=fr_FR.UTF-8;LC_MESSAGES=fr_FR.UTF-8;
+                                            LC_PAPER=fr_FR.UTF-8;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=fr_FR.UTF-8;LC_IDENTIFICATION=C"
+
+    > format(Sys.Date(), format="%A %d %B %Y")
+                                            [1] "mardi 14 avril 2020"
+
+    > as.Date(x = "lundi 13 avril 2020", format = "%A %d %B %Y")
+                                            [1] "2020-04-13"
+    > as.Date(x = "lundi-13-AVRIL-2020", format = "%A-%d-%B-%Y")
+                                            [1] "2020-04-13"
+    > as.Date(x = "Monday 13 april 2020", format = "%A %d %B %Y")
+                                            [1] NA
+    > as.Date(x = "lundi-13-AVR-2020", format = "%A-%d-%B-%Y")
+                                            [1] NA
+changement de LC_TIME
+
+    > Sys.setlocale("LC_TIME", "en_US.UTF-8")
+                                        [1] "en_US.UTF-8"
+    > as.Date(x = "Monday 13 april 2020", format = "%A %d %B %Y")
+                                        [1] "2020-04-13"
+    > as.Date(x = "Monday 13 april 2020", format = "%A %d %B %Y")
+                                        [1] "2020-04-13"
+
+    > as.Date(x = "lundi-13-AVR-2020", format = "%A-%d-%B-%Y")
+                                        [1] NA
+
+sous shell lunix    par défaut francais  avec la commande date
+     >    date
+                            mardi 14 avril 2020, 21:55:02 (UTC+0200)
+
+mais quand tu mets le paramètre, il doit être au format US ,
+je me demande si c'est le local de strftime
+   > date -d  "07-APR-2012 13:18:32"  "+%d-%m-%Y %H:%M:%S"
+                            07-04-2012 13:18:32
+    >date -d  "07-APRIL-2012 13:18:32"  "+%d-%m-%Y %H:%M:%S"
+                            07-04-2012 13:18:32
+
+    > date -d  "07-AVRIL-2012 13:18:32"  "+%d-%m-%Y %H:%M:%S"
+                            date: date «07-AVRIL-2012 13:18:32» incorrecte
+

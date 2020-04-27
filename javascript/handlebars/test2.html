@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Handlebars - Parsing JSON text</title>
+	<link rel="stylesheet" href="handlebars.css">
+	
+</head>
+
+<body>
+<div class="page-wrap">
+  <h1>Console Log Tutorial</h1>
+  <h2>Console log directly responseText</h2>
+  <div id="pets-container1"></div>
+  <h2>Console dir data after parsing responseText</h2>
+  <div id="pets-container2"></div>
+
+<h2>Formattting specifiers for obj in Chrome</h2>
+<div>
+<pre>
+Use string formats;
+
+console.log("%s %O", "My Object", obj);
+Chrome has Format Specifiers with the following;
+
+%s Formats the value as a string.
+%d or %i Formats the value as an integer.
+%f Formats the value as a floating point value.
+%o Formats the value as an expandable DOM element (as in the Elements panel).
+%O Formats the value as an expandable JavaScript object.
+%c Formats the output string according to CSS styles you provide.
+</pre>
+</div>
+</div>
+
+<script>
+/* to test the request : console log and print out response data in document */
+var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/pets-data.json');
+
+ourRequest.onload = function() {
+	console.log(ourRequest.responseText);
+	var data = JSON.parse(ourRequest.responseText);
+	console.dir(data);   /*consol.log does not print out data but only object tag*/
+	console.log(JSON.stringify(data, null, 4));
+	console.log("%s %O", "My Object", data);
+	/* print to document */
+	var container1 = document.getElementById("pets-container1");
+	var container2 = document.getElementById("pets-container2");
+	container1.innerHTML = ourRequest.responseText+"<br>";
+	container2.innerHTML = JSON.stringify(data);  /*does not idendate well */
+};
+ourRequest.send();
+
+
+</script>
+
+</body>
+</html>

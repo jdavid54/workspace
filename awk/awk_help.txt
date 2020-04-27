@@ -1,0 +1,250 @@
+#internet
+https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
+https://www.gnu.org/software/gawk/manual/gawk.html
+
+#syntaxe :
+$ awk options 'selection _criteria {action }' input-file > output-file
+
+#options : 
+-f program-file : Reads the AWK program source from the file 
+                  program-file, instead of from the 
+                  first command line argument.
+-F fs           : Use fs for the input field separator
+
+
+#Built In Variables In Awk :
+
+field variables : $1, $2, $3, and so on ($0 is the entire line)
+
+NR: NR command keeps a current count of the number of input records. Remember that records are usually lines. Awk command performs the pattern/action statements once for each record in a file.
+
+NF: NF command keeps a count of the number of fields within the current input record.
+
+FS: FS command contains the field separator character which is used to divide fields on the input line. The default is “white space”, meaning space and tab characters. FS can be reassigned to another character (typically in BEGIN) to change the field separator.
+
+RS: RS command stores the current record separator character. Since, by default, an input line is the input record, the default record separator character is a newline.
+
+OFS: OFS command stores the output field separator, which separates the fields when Awk prints them. The default is a blank space. Whenever print has several parameters separated with commas, it will print the value of OFS in between each parameter.
+
+ORS: ORS command stores the output record separator, which separates the output lines when Awk prints them. The default is a newline character. print automatically outputs the contents of ORS at the end of whatever it is given to print.
+
+
+#examples :
+
+$ cat employee.txt
+ajay manager account 45000
+sunil clerk account 25000
+varun manager sales 50000
+amit manager account 47000
+tarun peon sales 15000
+deepak clerk sales 23000
+sunil peon sales 13000
+
+$ awk '{print}' employee.txt
+ajay manager account 45000
+sunil clerk account 25000
+varun manager sales 50000
+amit manager account 47000
+tarun peon sales 15000
+deepak clerk sales 23000
+sunil peon sales 13000
+satvik director purchase 80000 
+
+#containing manager
+$ awk '/manager/ {print}' employee.txt
+ajay manager account 45000
+varun manager sales 50000
+amit manager account 47000
+
+$ awk '{print $1,$4}' employee.txt 
+ajay 45000
+sunil 25000
+varun 50000
+amit 47000
+tarun 15000
+deepak 23000
+sunil 13000
+satvik 80000
+
+$ awk '{print NR,$0}' employee.txt
+1 ajay manager account 45000
+2 sunil clerk account 25000
+3 varun manager sales 50000
+4 amit manager account 47000
+5 tarun peon sales 15000
+6 deepak clerk sales 23000
+7 sunil peon sales 13000
+8 satvik director purchase 80000 
+
+# $NF = last field
+$ awk '{print $1,$NF}' employee.txt   
+ajay 45000
+sunil 25000
+varun 50000
+amit 47000
+tarun 15000
+deepak 23000
+sunil 13000
+satvik 80000
+
+#Display Line From 3 to 6
+$ awk 'NR==3, NR==6 {print NR,$0}' employee.txt
+3 varun manager sales 50000
+4 amit manager account 47000
+5 tarun peon sales 15000
+6 deepak clerk sales 23000
+
+$ awk '{print NR "- " $1 }' geeksforgeeks.txt
+1- A
+2- Tarun
+3- Man
+4- Praveen
+
+$ awk '{print $2}' geeksforgeeks.txt
+B
+A12
+B6
+M42
+
+#print all lines with number of fields NF > 0
+$ awk 'NF > 0' geeksforgeeks.txt
+A    B    C
+Tarun    A12    1
+Man    B6    2
+Praveen    M42    3
+
+#To find the length of the longest line present in the file
+$ awk '{ if (length($0) > max) max = length($0) } END { print NR"-" max }' geeksforgeeks.txt
+4-19
+
+#To count the lines in a file
+$ awk 'END { print NR }' geeksforgeeks.txt
+4
+
+#Printing lines with more than 12 characters:
+$ awk 'length($0) > 12' geeksforgeeks.txt
+Tarun    A12    1
+Man    B6    2
+Praveen    M42    3
+
+#To find/check for any string in any column
+$ awk '{ if($2 == "B6") print $0;}' geeksforgeeks.txt
+Man    B6    2
+
+#To print the squares of first numbers from 1 to n say 6
+$ awk 'BEGIN { for(i=1;i<=6;i++) print "square of", i, "is",i*i; }'
+square of 1 is 1
+square of 2 is 4
+square of 3 is 9
+square of 4 is 16
+square of 5 is 25
+square of 6 is 36
+
+#repeat what you type until ctrl-d
+$ awk '{ print }'
+hello
+hello
+world
+world
+
+# lines containing li
+$ awk '/li/ { print $0 }' mail-list.txt
+Amelia       555-5553     amelia.zodiacusque@gmail.com    F
+Broderick    555-0542     broderick.aliquotiens@yahoo.com R
+Julie        555-6699     julie.perscrutabor@skeeve.com   F
+Samuel       555-3430     samuel.lanceolis@shu.edu        A
+
+#print random numbers
+$ awk 'BEGIN { for (i = 1; i <= 7; i++) print int(101 * rand()) }'
+93
+99
+45
+73
+45
+1
+28
+
+$ ls -l *.csv
+-rw-r--r-- 1 pi pi  2131 Apr 11 10:50 CPU01.csv
+-rw-r--r-- 1 pi pi  2126 Apr 11 10:50 CPU02.csv
+-rw-r--r-- 1 pi pi  2105 Apr 11 10:50 CPU03.csv
+-rw-r--r-- 1 pi pi  2106 Apr 11 10:50 CPU04.csv
+-rw-r--r-- 1 pi pi  2092 Apr 11 10:50 CPU05.csv
+-rw-r--r-- 1 pi pi  2175 Apr 11 10:50 CPU06.csv
+-rw-r--r-- 1 pi pi  2501 Apr 11 10:50 CPU_ALL.csv
+-rw-r--r-- 1 pi pi 12040 Apr 11 10:50 DISKBSIZE.csv
+-rw-r--r-- 1 pi pi  5942 Apr 11 10:50 DISKBUSY.csv
+-rw-r--r-- 1 pi pi  5932 Apr 11 10:50 DISKREAD.csv
+-rw-r--r-- 1 pi pi  6230 Apr 11 10:50 DISKWRITE.csv
+-rw-r--r-- 1 pi pi  5996 Apr 11 10:50 DISKXFER.csv
+-rw-r--r-- 1 pi pi 11172 Apr 11 10:50 MEM.csv
+-rw-r--r-- 1 pi pi  5004 Apr 11 10:50 NET.csv
+-rw-r--r-- 1 pi pi  6289 Apr 11 10:50 NETPACKET.csv
+-rw-r--r-- 1 pi pi  6085 Apr 11 10:50 PROC.csv
+# additionne le champ $5:longueur des fichiers et affiche le total
+$ ls -l *.csv | awk '{ x += $5 }END { print "total bytes: " x }'
+total bytes: 79926
+
+# en kilo-bytes
+$ ls -l *.csv | awk '{ x += $5 }
+   END { print "total K-bytes:", x / 1024 }'
+total K-bytes: 78.0527
+
+#Print a sorted list of the login names of all users
+$ awk -F: '{ print $1 }' /etc/passwd | sort
+_apt
+avahi
+backup
+bin
+colord
+daemon
+games
+gnats
+irc
+lightdm
+list
+lp
+mail
+man
+messagebus
+news
+nobody
+pi
+proxy
+root
+_rpc
+saned
+sshd
+statd
+sync
+sys
+systemd-coredump
+systemd-network
+systemd-resolve
+systemd-timesync
+uucp
+www-data
+
+
+#Example with Two Rules
+$ awk '/12/ { print $0 } /21/ { print $0 }' mail-list.txt inventory-shipped.txt
+Anthony      555-3412     anthony.asserturo@hotmail.com   A
+Camilla      555-2912     camilla.infusarum@skynet.be     R
+Fabius       555-1234     fabius.undevicesimus@ucb.edu    F
+Jean-Paul    555-2127     jeanpaul.campanorum@nyu.edu     R
+Jean-Paul    555-2127     jeanpaul.campanorum@nyu.edu     R
+Jan  21  36  64 620
+Apr  21  70  74 514
+
+# sum the size of files in Apr
+$ ls -l | awk '$6 == "Apr" { sum += $5 } END { print sum }'
+251727
+
+# commande sur 2 lignes
+awk '/Anthony      555-3412\
+     anthony.asserturo@hotmail.com   A/ { print $1 }' mail-list.txt
+Anthony
+
+#variables
+$ awk -v foo=1 -v bar=2 'BEGIN {print foo"----" bar}'
+1----2

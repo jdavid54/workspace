@@ -1,0 +1,38 @@
+1) Dans le fichier html, on met en place  div "page-wrap" qui contient div "pets-container vide.
+
+2) On crée à la fin le pseudo-script "petsTemplate" qui sera lu et complilé par la fonction createHTML du fichier javascript pour générer les div de classe "pet".
+Le pseudo-code est mis dans le tag script pour éviter d'être affiché. 
+
+pseudo-script -> compiledTemplate()
+
+	- {{#each pets}} : pour chaque item de pets = petsData
+	    on crée les div :
+	      . photo-column : pour la photo qui est donné par src = {{photo}}
+	      . info-column :
+	      	+ pour species qui est donné par {{species}}
+	      	+ age qui sera calculé par le helper {{calculateAge birthYear}}
+	      	+ si FavFoods existe avec {{#if}}, on crée à partir de {#each favFoods}} 
+	      	  les listes avec <li>{{{this}}}</li>.
+	      	  note : on utilise "this" car favFoods est une liste
+
+
+3) handlebars.js : exécuté au moment de l'
+	- création d'une requête r = new XMLHttpRequest()
+	- récupère les datas de l'url par r.open('GET',url) qui retourne un texte
+	- JSON.parse(texte) -> data
+	- appel de la fonction CreateHTML avec data
+
+a) fonction createHTML :	
+	- récupère le contenu innerHTML de petsTemplate -> rawTemplate
+	- compilé par Handlebars.compli() pour produire la fonction compiledTemplate()
+	- on génère le code HTML en appliquant la fonction sur les datas de petsData
+	- le code obtenu sera écrit dans l'emplacement réservé du div "pets-container".
+	
+b) helper calculateAge : appelé par le pseudo-code {{calculateAge birthYear}}
+	- on enregistre la fonction avec registerHelper()
+	- cette fonction récupère l'année avec new Date().getFullYear()
+	- calcule et retourne l'âge à l'emplacement où la fonction est déclenchée.
+
+	      
+
+ 

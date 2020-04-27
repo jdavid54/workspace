@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Time in text</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+span {color : lightgrey;}
+.fixed {color : black; font-weight: bold}
+.no {color : lightgrey}
+.time {color : black;}
+.bold {
+	font-weight: normal; 
+	//border : .5px solid black;  
+	//padding: .5px;
+}
+</style>
+
+
+</head>
+<body>
+<div id='parent'>
+<span class='fixed bold'>I T </span>
+<span class='no'>L</span>
+<span class='fixed bold'>I S</span>
+<span class='no'>A S</span>
+<span class='no'>T I M E</span>
+<br>
+<span class='no quarter'>A</span>
+<span class='no'>C</span>
+<span class='quarter'>Q U A R T E R</span>
+<span class='no'>D C</span>
+<br>
+<span class='twenty twentyfive'>T W E N T Y</span>
+<span class='no'>X</span>
+<span class='five twentyfive'>F I V E</span>
+
+<br>
+<span class='half'>H A L F</span>
+<span class='no'>B</span>
+<span class='ten'>T E N</span>
+<span class='no'>F</span>
+<span class='to'>T O</span>
+<br>
+<span class='past' id='past'>P A S T</span>
+<span class='no'>E R U</span>
+<span class='nine'>N I N E</span>
+<br>
+<span class='one'>O N E</span>
+<span class='six'>S I X</span>
+<span class='three'>T H R E E</span>
+<br>
+<span class='four'>F O U R</span>
+<span class='five2'>F I V E</span>
+<span class='two'>T W O</span>
+<br>
+<span class='eight'>E I G H T</span>
+<span class='eleven'>E L E V E N</span>
+<br>
+<span class='seven'>S E V E N</span>
+<span class='twelve'>T W E L V E</span>
+<br>
+<span class='ten2'>T E N</span>
+<span class='no'>S E</span>
+<span class='oclock'>O' C L O C K</span>
+<br>
+</div>
+
+<script>
+const today = new Date();
+console.log(today);
+console.log(today.getDate());
+console.log(today.getHours());
+console.log(today.getMinutes());
+
+function testMinute() {
+	var  cl1 = "";
+	var prefixe = "past";
+	var min = today.getMinutes();
+	if (min > 30) { min = 60 - min; prefixe = "to";}
+	if (min >= 0) {
+	cl = {cl1 : "oclock", cl2 : "oclock"};
+	} 
+	if (min >= 5) {
+	cl = {cl1 : "five", cl2 : prefixe};
+	}
+	if (min >= 10){
+	cl = {cl1 : "ten", cl2 : prefixe};
+	}
+	if (min >= 15){
+	cl = {cl1 : "quarter", cl2 : prefixe};;
+	}
+	if (min >= 20){
+	cl = {cl1 : "twenty", cl2 : prefixe};
+	}
+	if (min >= 25){
+	cl = {cl1 : "twentyfive", cl2 : prefixe};
+	}
+	if (min >= 28){
+	cl = {cl1 : "half", cl2 : prefixe};
+	} 
+	return cl;
+}
+
+function testHour() {
+	var cl3 = "";
+	var hour = today.getHours();
+	//hour =0;
+	var min = today.getMinutes();
+	if (hour > 12) { hour = hour - 12}
+	if (min > 30) { hour += 1;}
+	if (hour == 0) { return "twelve"};
+	if (hour == 1) { return "one"};
+	if (hour == 2) { return "two"};
+	if (hour == 3) { return "three"};
+	if (hour == 4) { return "four"};
+	if (hour == 5) { return "five2"};
+	if (hour == 6) { return "six"};
+	if (hour == 7) { return "seven"};
+	if (hour == 8) { return "eight"};
+	if (hour == 9) { return "nine"};
+	if (hour == 10) { return "ten2"};
+	if (hour == 11) { return "eleven"};
+	if (hour == 12) { return "twelve"};
+
+}
+
+
+function do_byJS(){
+	element = document.getElementsByClassName(cl1)[0];
+	console.log(element);
+	// cl1
+	element.classList.add('time', 'bold');
+	if (cl1 == "twentyfive" | cl1 == "quarter") {
+	   element = document.getElementsByClassName(cl1)[1];
+	   console.log(element);
+	   element.classList.add('time', 'bold');
+	}
+	// cl2
+	element = document.getElementsByClassName(cl2)[0];
+	element.classList.add('time', 'bold');
+	// cl3
+	element = document.getElementsByClassName(cl3)[0];
+	console.log(element);
+	element.classList.add('time', 'bold');
+}
+
+function do_byjQuery(){
+	$("."+cl1).addClass("time bold");
+	$("."+cl2).addClass("time bold");
+	$("."+cl3).addClass("time bold");
+}
+
+//Main
+/* Get the classes */
+let {cl1, cl2} = testMinute();
+//cl1 = 'twentyfive'; cl2 ="to";
+cl3 = testHour();
+console.log(cl1, cl2, cl3);
+//do_byJS();
+do_byjQuery();
+
+</script>
+
+<body>

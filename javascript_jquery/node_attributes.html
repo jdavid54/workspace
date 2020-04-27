@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Exemple d'attributs</title>
+<script type="text/javascript">
+
+function listAttributes(elt) {
+	var paragraph = document.getElementById(elt);
+	var result = document.getElementById("result");
+	// D'abord, vérifier que le "paragraph" a quelques attributs    
+	if (paragraph.hasAttributes()) {
+		var attrs = paragraph.attributes;
+		var output = "";
+		for(var i = attrs.length - 1; i >= 0; i--) {
+			output += attrs[i].name + "->" + attrs[i].value;
+			}
+		result.value = output;
+console.log(output);
+	} 
+	else {
+		result.value = "No attributes to show";
+	}
+}
+
+</script>
+</head>
+
+<body>
+ <p id="paragraph" style="color: green;">Sample Paragraph</p>
+ <form action="">
+  <p>
+    <input type="button" value="Show first attribute name and value"
+      onclick="listAttributes('paragraph');">
+    <input id="result" type="text" value="">
+  </p>
+ </form>
+</body>
+</html>

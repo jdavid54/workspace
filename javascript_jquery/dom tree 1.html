@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM tree 1</title>
+</head>
+<body>
+    <div id="parent-id">
+        <p>hello word1</p>
+        <p class="test">
+				<span>
+					<span>hello word2</span>
+				</span>
+				<span>
+					span2 hello word2
+				</span>
+		  </p>
+        <p >hello word3</p>
+        <p>hello word4</p>
+		  <p>hello word5</p>
+    </div>
+
+	 <p id="demo"></p> 
+
+
+
+<script>
+        var parentDOM = document.getElementById("parent-id");
+        
+        var test=parentDOM.getElementsByClassName("test");//test is not target element
+        //console.log(test);//HTMLCollection[1]
+
+        var testTarget=parentDOM.getElementsByClassName("test")[0];//here , this element is target
+        //console.log(testTarget);//<p class="test">hello word2</p>
+
+function console1() {
+	console.log(testTarget.nextSibling);     // structure testTarget
+	console.log(testTarget.nextSibling.nextSibling);
+	console.log(testTarget.nextElementSibling);  //idem next.next
+	console.log(testTarget.nextElementSibling.innerHTML);
+	console.log(testTarget.childNodes);  // null vide
+	console.log(testTarget.ownerDocument);
+	console.log(testTarget.parentElement);
+	console.log(testTarget.parentNode);  //idem
+	console.log(testTarget.previousElementSibling);
+	console.log(testTarget.previousSibling); 
+	console.log(testTarget.previousSibling.previousSibling);  
+}
+
+
+function console2() {
+console.log('nextSibling');
+result = testTarget;
+	for (k=1;k<10;k++) {	
+		console.log(k,result);
+		if (result.nextSibling != null) {result = result.nextSibling;}
+	}
+
+}
+
+function console3() {  //previousSibling jamais null
+console.log('previousSibling');
+result = testTarget;
+	for (k=1;k<20;k++) {	
+		console.log(k,result);
+		if (result.previousSibling != null) {result = result.previousSibling;}
+	}
+
+}
+
+function console4() {  //parentNode jamais null
+console.log('parentNode');
+result = testTarget;
+	for (k=1;k<20;k++) {	
+		console.log(k,result);
+		if (result.parentNode != null) {result = result.parentNode;}
+	}
+
+}
+
+function console5() {  //firstChild jamais null
+console.log('firstChild');
+result = testTarget;
+	for (k=1;k<20;k++) {	
+		console.log(k,result);
+		if (result.firstChild != null) {result = result.firstChild;}
+	}
+
+}
+
+function console6() {
+	testTarget=parentDOM.getElementsByClassName("test");
+	console.log(testTarget);  //HTMLCollection = liste qui contient un élément 0 
+	console.log(testTarget.children);   //undefined
+	console.log(testTarget.nextSibling);   //undefined
+	console.log(testTarget.firstChild);    //undefined
+	console.log('Elément 0',testTarget[0]); //pour accéder il faut pointer l'élément 0
+	console.log('children de 0',testTarget[0].children);
+	console.log('nextsSibling de 0',testTarget[0].nextSibling);
+	console.log('firstChild de 0',testTarget[0].firstChild); // data: "↵				" : tag <p>
+	console.log('lastChild de 0',testTarget[0].lastChild); // data: "↵				" : tag </p>
+	console.log(testTarget[0].children);   // liste de children
+	console.log(testTarget[0].children[0].children);  // premier enfant
+	console.log(testTarget[0].children[0].firstChild);  // premier enfant  data: "↵				" : tag <span>
+	console.log(testTarget[0].children[0].firstChild.nextSibling);  // nextsibling
+
+}
+
+
+function listNodes() {
+  var c = document.body.childNodes[1].childNodes;  // node DIV
+  console.log(c);
+  var txt = "";
+  var i;
+  for (i = 0; i < c.length; i++) {
+    txt = txt + c[i].nodeName + "<br>";
+  }
+
+  document.getElementById("demo").innerHTML = txt;
+}
+
+
+//console2();
+//console5();
+//console6();
+listNodes();
+
+
+
+
+</script>
+</body>
+</html>

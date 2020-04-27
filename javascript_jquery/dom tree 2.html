@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM tree 2</title>
+</head>
+
+
+<body>
+<div id="div1">
+  <div id="exemple1">
+       <div id="exemple11" >      
+			<div id="exemple111" >Exemple 111</div>
+			<div id="exemple112" >Exemple 112</div>
+	   </div>
+      <div id="exemple12" >Exemple 12</div>
+		<div id="exemple13" >Exemple 13</div>
+      <div id="exemple14" >Exemple 14</div>
+ 		<span id='span'> Span</span>
+   </div>
+ 
+   <div id="exemple2" >
+       <div id="exemple21">Exemple 21</div>
+   </div>
+ 
+   <div id="exemple3" >Exemple 3</div>
+</div>
+<input type="button" onclick="getIds('div1')" value='Click me' />
+<p id="demo"></p> 
+<p id="demo2"></p> 
+
+<script>
+console.log(document);
+//var document = new Document();
+console.log(document.childNodes);
+
+// recursion function
+function getIds(elt){
+	console.log("get all children's ids of",elt);
+	var node = document.getElementById(elt);
+	var children = node.childNodes;
+	var k;
+	for(k=0;k<children.length;k++){
+		// On teste si l'id de l'élément est défini
+		if( document.getElementById(children[k].id)){
+			console.log(k, children[k].id );
+			//  Ici on fait son traitement. 
+			if (document.getElementById(children[k].id).hasChildNodes()) {
+				getIds(children[k].id);
+			}
+		}
+	}
+}
+
+function listAttributes(node) {
+	console.log('call with ',node);
+	// D'abord, vérifier que node a quelques attributs    
+	if (node.hasAttributes()) {
+		console.log('has attributes');
+		var attrs = node.attributes;
+		var output = node.nodeName+': ';
+		for(var i = attrs.length - 1; i >= 0; i--) {
+		output += i +':'+ attrs[i].name + "->" + attrs[i].value;
+		}
+		console.log(output);
+	} else {
+		console.log("No attributes to show");
+	}
+}
+
+function listNodes(node) {
+	s = document.querySelectorAll(node);
+	var c = s[0].childNodes;  // childNodes de node
+	console.log(s,c);
+	var txt = "";
+	var i;
+	for (i = 0; i < c.length; i++) {
+		console.log(c[i]);
+		txt = txt + c[i].nodeName;
+		if (c[i].nodeName != '#text') {
+		 var attrs = c[i].attributes; 
+		 txt += '#'+c[i].getAttribute('id'); 
+		 listAttributes(c[i]);
+	 }
+	 txt = txt  + "<br>";
+}
+
+  document.getElementById("demo").innerHTML = txt;
+}
+
+function call_node(node){
+	//console.log(document.body.childNodes);
+	s = document.querySelectorAll(node);
+	console.log(s,s[0].childNodes);
+}
+
+call_node('head')
+call_node('body')
+
+getIds('div1');
+//listNodes('head');
+listNodes('body');
+listNodes('div');
+var s = document.querySelectorAll('body');
+var c = s[0].childNodes;  // childNodes de node
+console.log('112',c,c[1]);
+console.log(typeof c, typeof c[1]);
+listAttributes(c[1]);
+
+</script>
+
+</body>
+</html>

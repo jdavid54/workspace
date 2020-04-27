@@ -1,0 +1,69 @@
+pi@raspberrypi:~/Desktop/nmon $ python3  test_parseargs.py
+[]
+usage: test_parseargs.py [-h] [-x] [-d] [--force] [-i INPUT_FILE] [-o OUTDIR]
+                         [-c] [-b] [-t REPORTTYPE] [-r CONFFNAME]
+                         [--dygraphLocation DYGRAPHLOC] [--defaultConfig]
+                         [-l LOGLEVEL]
+
+nmonParser converts NMON monitor files into time-sorted CSV/Spreadsheets for
+easier analysis, without the use of the MS Excel Macro. Also included is an
+option to build an HTML report with graphs, which is configured through
+report.config.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -x, --overwrite       overwrite existing results (Default: False)
+  -d, --debug           debug? (Default: False)
+  --force               force using of config (Default: False)
+  -i INPUT_FILE, --inputfile INPUT_FILE
+                        Input NMON file
+  -o OUTDIR, --output OUTDIR
+                        Output dir for CSV (Default: ./report/)
+  -c, --csv             CSV output? (Default: False)
+  -b, --buildReport     report output? (Default: False)
+  -t REPORTTYPE, --reportType REPORTTYPE
+                        Should we be generating a "static" or "interactive"
+                        report (Default: interactive)
+  -r CONFFNAME, --reportConfig CONFFNAME
+                        Report config file, if none exists: we will write the
+                        default config file out (Default: ./report.config)
+  --dygraphLocation DYGRAPHLOC
+                        Specify local or remote location of dygraphs library.
+                        This only applies to the interactive report. (Default:
+                        http://dygraphs.com/1.1.0/dygraph-combined.js)
+  --defaultConfig       Write out a default config file
+  -l LOGLEVEL, --log LOGLEVEL
+                        Logging verbosity, use DEBUG for more output and
+                        showing graphs (Default: INFO)
+
+
+
+
+pi@raspberrypi:~/Desktop/nmon $ python3  test_parseargs.py -d
+['-d']
+Namespace(buildReport=False, confFname='./report.config', debug=True, defaultConf=False, dygraphLoc='http://dygraphs.com/1.1.0/dygraph-combined.js', force=False, input_file='test.nmon', logLevel='INFO', outdir='./report/', outputCSV=False, overwrite=False, reportType='interactive')
+
+pi@raspberrypi:~/Desktop/nmon $ python3  test_parseargs.py -l DEBUG
+['-l', 'DEBUG']
+Namespace(buildReport=False, confFname='./report.config', debug=False, defaultConf=False, dygraphLoc='http://dygraphs.com/1.1.0/dygraph-combined.js', force=False, input_file='test.nmon', logLevel='DEBUG', outdir='./report/', outputCSV=False, overwrite=False, reportType='interactive')
+
+pi@raspberrypi:~/Desktop/nmon $ python3  test_parseargs.py -l DEBUG -d
+['-l', 'DEBUG', '-d']
+Namespace(buildReport=False, confFname='./report.config', debug=True, defaultConf=False, dygraphLoc='http://dygraphs.com/1.1.0/dygraph-combined.js', force=False, input_file='test.nmon', logLevel='DEBUG', outdir='./report/', outputCSV=False, overwrite=False, reportType='interactive')
+
+pi@raspberrypi:~/Desktop/nmon $ python3  test_parseargs.py -l DEBUG -d -x
+['-l', 'DEBUG', '-d', '-x']
+Namespace(buildReport=False, confFname='./report.config', debug=True, defaultConf=False, dygraphLoc='http://dygraphs.com/1.1.0/dygraph-combined.js', force=False, input_file='test.nmon', logLevel='DEBUG', outdir='./report/', outputCSV=False, overwrite=True, reportType='interactive')
+
+pi@raspberrypi:~/Desktop/nmon $ python3  test_parseargs.py -l DEBUG -d -x -c
+['-l', 'DEBUG', '-d', '-x', '-c']
+Namespace(buildReport=False, confFname='./report.config', debug=True, defaultConf=False, dygraphLoc='http://dygraphs.com/1.1.0/dygraph-combined.js', force=False, input_file='test.nmon', logLevel='DEBUG', outdir='./report/', outputCSV=True, overwrite=True, reportType='interactive')
+
+pi@raspberrypi:~/Desktop/nmon $ python3  test_parseargs.py -l DEBUG -d -x -c -o testReport
+['-l', 'DEBUG', '-d', '-x', '-c', '-o', 'testReport']
+Namespace(buildReport=False, confFname='./report.config', debug=True, defaultConf=False, dygraphLoc='http://dygraphs.com/1.1.0/dygraph-combined.js', force=False, input_file='test.nmon', logLevel='DEBUG', outdir='testReport', outputCSV=True, overwrite=True, reportType='interactive')
+
+pi@raspberrypi:~/Desktop/nmon $ python3  test_parseargs.py -l DEBUG -d -x -c -o testReport -i montest.nmon
+['-l', 'DEBUG', '-d', '-x', '-c', '-o', 'testReport', '-i', 'montest.nmon']
+Namespace(buildReport=False, confFname='./report.config', debug=True, defaultConf=False, dygraphLoc='http://dygraphs.com/1.1.0/dygraph-combined.js', force=False, input_file='montest.nmon', logLevel='DEBUG', outdir='testReport', outputCSV=True, overwrite=True, reportType='interactive')
+

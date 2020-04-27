@@ -1,0 +1,668 @@
+AAA,progname,nmon
+AAA,command,./nmon -f -s 1 -c 10 
+AAA,version,16h
+AAA,disks_per_line,150
+AAA,max_disks,256,set by -d option
+AAA,disks,5,
+AAA,host,raspberrypi
+AAA,user,root
+AAA,OS,Linux,4.19.97-v7+,#1294 SMP Thu Jan 30 13:15:58 GMT 2020,armv7l
+AAA,runname,raspberrypi
+AAA,time,12:17.57
+AAA,date,15-APR-2020
+AAA,interval,1
+AAA,snapshots,10
+AAA,cpus,4
+AAA,ARM,VendorId,not-set
+AAA,ARM,ModelName,ARMv7 Processor rev 4 (v7l)
+AAA,ARM,MHz,not-set
+AAA,ARM,bogomips,76.80
+AAA,ARM,ProcessorChips,0
+AAA,ARM,Cores,0
+AAA,ARM,hyperthreads,0
+AAA,ARM,VirtualCPUs,4
+AAA,proc_stat_variables,8
+AAA,boottime,11:46 AM 15-Apr-2020
+AAA,note0, Warning - use the UNIX sort command to order this file before loading into a spreadsheet
+AAA,note1, The First Column is simply to get the output sorted in the right order
+AAA,note2, The T0001-T9999 column is a snapshot number. To work out the actual time; see the ZZZ section at the end
+CPU001,CPU 1 raspberrypi,User%,Sys%,Wait%,Idle%,Steal%
+CPU002,CPU 2 raspberrypi,User%,Sys%,Wait%,Idle%,Steal%
+CPU003,CPU 3 raspberrypi,User%,Sys%,Wait%,Idle%,Steal%
+CPU004,CPU 4 raspberrypi,User%,Sys%,Wait%,Idle%,Steal%
+CPU_ALL,CPU Total raspberrypi,User%,Sys%,Wait%,Idle%,Steal%,Busy,CPUs
+MEM,Memory MB raspberrypi,memtotal,hightotal,lowtotal,swaptotal,memfree,highfree,lowfree,swapfree,memshared,cached,active,bigfree,buffers,swapcached,inactive
+PROC,Processes raspberrypi,Runnable,Blocked,pswitch,syscall,read,write,fork,exec,sem,msg
+NET,Network I/O raspberrypi,wlan0-read-KB/s,eth0-read-KB/s,lo-read-KB/s,wlan0-write-KB/s,eth0-write-KB/s,lo-write-KB/s
+NETPACKET,Network Packets raspberrypi,wlan0-read/s,eth0-read/s,lo-read/s,wlan0-write/s,eth0-write/s,lo-write/s
+DISKBUSY,Disk %Busy raspberrypi,mmcblk0,mmcblk0p1,mmcblk0p2,sda,sda1
+DISKREAD,Disk Read KB/s raspberrypi,mmcblk0,mmcblk0p1,mmcblk0p2,sda,sda1
+DISKWRITE,Disk Write KB/s raspberrypi,mmcblk0,mmcblk0p1,mmcblk0p2,sda,sda1
+DISKXFER,Disk transfers per second raspberrypi,mmcblk0,mmcblk0p1,mmcblk0p2,sda,sda1
+DISKBSIZE,Disk Block Size raspberrypi,mmcblk0,mmcblk0p1,mmcblk0p2,sda,sda1
+JFSFILE,JFS Filespace %Used raspberrypi,/,/dev,/run,/boot,/media/pi/VERBATIM32G
+BBBP,000,/etc/release
+BBBP,001,/etc/release,"PRETTY_NAME=QRaspbian GNU/Linux 10 (buster)Q"
+BBBP,002,/etc/release,"NAME=QRaspbian GNU/LinuxQ"
+BBBP,003,/etc/release,"VERSION_ID=Q10Q"
+BBBP,004,/etc/release,"VERSION=Q10 (buster)Q"
+BBBP,005,/etc/release,"VERSION_CODENAME=buster"
+BBBP,006,/etc/release,"ID=raspbian"
+BBBP,007,/etc/release,"ID_LIKE=debian"
+BBBP,008,/etc/release,"HOME_URL=Qhttp://www.raspbian.org/Q"
+BBBP,009,/etc/release,"SUPPORT_URL=Qhttp://www.raspbian.org/RaspbianForumsQ"
+BBBP,010,/etc/release,"BUG_REPORT_URL=Qhttp://www.raspbian.org/RaspbianBugsQ"
+BBBP,011,lsb_release
+BBBP,012,fdisk-l
+BBBP,013,fdisk-l,"Disk /dev/ram0: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,014,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,015,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,016,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,017,fdisk-l,""
+BBBP,018,fdisk-l,""
+BBBP,019,fdisk-l,"Disk /dev/ram1: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,020,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,021,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,022,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,023,fdisk-l,""
+BBBP,024,fdisk-l,""
+BBBP,025,fdisk-l,"Disk /dev/ram2: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,026,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,027,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,028,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,029,fdisk-l,""
+BBBP,030,fdisk-l,""
+BBBP,031,fdisk-l,"Disk /dev/ram3: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,032,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,033,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,034,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,035,fdisk-l,""
+BBBP,036,fdisk-l,""
+BBBP,037,fdisk-l,"Disk /dev/ram4: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,038,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,039,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,040,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,041,fdisk-l,""
+BBBP,042,fdisk-l,""
+BBBP,043,fdisk-l,"Disk /dev/ram5: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,044,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,045,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,046,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,047,fdisk-l,""
+BBBP,048,fdisk-l,""
+BBBP,049,fdisk-l,"Disk /dev/ram6: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,050,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,051,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,052,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,053,fdisk-l,""
+BBBP,054,fdisk-l,""
+BBBP,055,fdisk-l,"Disk /dev/ram7: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,056,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,057,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,058,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,059,fdisk-l,""
+BBBP,060,fdisk-l,""
+BBBP,061,fdisk-l,"Disk /dev/ram8: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,062,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,063,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,064,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,065,fdisk-l,""
+BBBP,066,fdisk-l,""
+BBBP,067,fdisk-l,"Disk /dev/ram9: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,068,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,069,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,070,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,071,fdisk-l,""
+BBBP,072,fdisk-l,""
+BBBP,073,fdisk-l,"Disk /dev/ram10: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,074,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,075,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,076,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,077,fdisk-l,""
+BBBP,078,fdisk-l,""
+BBBP,079,fdisk-l,"Disk /dev/ram11: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,080,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,081,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,082,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,083,fdisk-l,""
+BBBP,084,fdisk-l,""
+BBBP,085,fdisk-l,"Disk /dev/ram12: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,086,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,087,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,088,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,089,fdisk-l,""
+BBBP,090,fdisk-l,""
+BBBP,091,fdisk-l,"Disk /dev/ram13: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,092,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,093,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,094,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,095,fdisk-l,""
+BBBP,096,fdisk-l,""
+BBBP,097,fdisk-l,"Disk /dev/ram14: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,098,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,099,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,100,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,101,fdisk-l,""
+BBBP,102,fdisk-l,""
+BBBP,103,fdisk-l,"Disk /dev/ram15: 4 MiB, 4194304 bytes, 8192 sectors"
+BBBP,104,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,105,fdisk-l,"Sector size (logical/physical): 512 bytes / 4096 bytes"
+BBBP,106,fdisk-l,"I/O size (minimum/optimal): 4096 bytes / 4096 bytes"
+BBBP,107,fdisk-l,""
+BBBP,108,fdisk-l,""
+BBBP,109,fdisk-l,"Disk /dev/mmcblk0: 29.7 GiB, 31914983424 bytes, 62333952 sectors"
+BBBP,110,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,111,fdisk-l,"Sector size (logical/physical): 512 bytes / 512 bytes"
+BBBP,112,fdisk-l,"I/O size (minimum/optimal): 512 bytes / 512 bytes"
+BBBP,113,fdisk-l,"Disklabel type: dos"
+BBBP,114,fdisk-l,"Disk identifier: 0x97709164"
+BBBP,115,fdisk-l,""
+BBBP,116,fdisk-l,"Device         Boot  Start      End  Sectors  Size Id Type"
+BBBP,117,fdisk-l,"ddev/mmcblk0p1        8192   532479   524288  256M  c W95 FAT32 (LBA)"
+BBBP,118,fdisk-l,"ddev/mmcblk0p2      532480 62333951 61801472 29.5G 83 Linux"
+BBBP,119,fdisk-l,""
+BBBP,120,fdisk-l,""
+BBBP,121,fdisk-l,"Disk /dev/sda: 28.9 GiB, 31054725120 bytes, 60653760 sectors"
+BBBP,122,fdisk-l,"Disk model: STORE N GO      "
+BBBP,123,fdisk-l,"Units: sectors of 1 * 512 = 512 bytes"
+BBBP,124,fdisk-l,"Sector size (logical/physical): 512 bytes / 512 bytes"
+BBBP,125,fdisk-l,"I/O size (minimum/optimal): 512 bytes / 512 bytes"
+BBBP,126,fdisk-l,"Disklabel type: dos"
+BBBP,127,fdisk-l,"Disk identifier: 0x04805957"
+BBBP,128,fdisk-l,""
+BBBP,129,fdisk-l,"Device     Boot Start      End  Sectors  Size Id Type"
+BBBP,130,fdisk-l,"ddev/sda1  *       62 60653759 60653698 28.9G  b W95 FAT32"
+BBBP,131,lsblk
+BBBP,132,lscpu
+BBBP,133,lscpu,"Architecture:        armv7l"
+BBBP,134,lscpu,"Byte Order:          Little Endian"
+BBBP,135,lscpu,"CPU(s):              4"
+BBBP,136,lscpu,"On-line CPU(s) list: 0-3"
+BBBP,137,lscpu,"Thread(s) per core:  1"
+BBBP,138,lscpu,"Core(s) per socket:  4"
+BBBP,139,lscpu,"Socket(s):           1"
+BBBP,140,lscpu,"Vendor ID:           ARM"
+BBBP,141,lscpu,"Model:               4"
+BBBP,142,lscpu,"Model name:          Cortex-A53"
+BBBP,143,lscpu,"Stepping:            r0p4"
+BBBP,144,lscpu,"CPU max MHz:         1200.0000"
+BBBP,145,lscpu,"CPU min MHz:         600.0000"
+BBBP,146,lscpu,"BogoMIPS:            76.80"
+BBBP,147,lscpu,"Flags:               half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32"
+BBBP,148,lshw
+BBBP,149,/proc/cpuinfo
+BBBP,150,/proc/cpuinfo,"processor	: 0"
+BBBP,151,/proc/cpuinfo,"model name	: ARMv7 Processor rev 4 (v7l)"
+BBBP,152,/proc/cpuinfo,"BogoMIPS	: 76.80"
+BBBP,153,/proc/cpuinfo,"Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 "
+BBBP,154,/proc/cpuinfo,"CPU implementer	: 0x41"
+BBBP,155,/proc/cpuinfo,"CPU architecture: 7"
+BBBP,156,/proc/cpuinfo,"CPU variant	: 0x0"
+BBBP,157,/proc/cpuinfo,"CPU part	: 0xd03"
+BBBP,158,/proc/cpuinfo,"CPU revision	: 4"
+BBBP,159,/proc/cpuinfo,""
+BBBP,160,/proc/cpuinfo,"processor	: 1"
+BBBP,161,/proc/cpuinfo,"model name	: ARMv7 Processor rev 4 (v7l)"
+BBBP,162,/proc/cpuinfo,"BogoMIPS	: 76.80"
+BBBP,163,/proc/cpuinfo,"Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 "
+BBBP,164,/proc/cpuinfo,"CPU implementer	: 0x41"
+BBBP,165,/proc/cpuinfo,"CPU architecture: 7"
+BBBP,166,/proc/cpuinfo,"CPU variant	: 0x0"
+BBBP,167,/proc/cpuinfo,"CPU part	: 0xd03"
+BBBP,168,/proc/cpuinfo,"CPU revision	: 4"
+BBBP,169,/proc/cpuinfo,""
+BBBP,170,/proc/cpuinfo,"processor	: 2"
+BBBP,171,/proc/cpuinfo,"model name	: ARMv7 Processor rev 4 (v7l)"
+BBBP,172,/proc/cpuinfo,"BogoMIPS	: 76.80"
+BBBP,173,/proc/cpuinfo,"Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 "
+BBBP,174,/proc/cpuinfo,"CPU implementer	: 0x41"
+BBBP,175,/proc/cpuinfo,"CPU architecture: 7"
+BBBP,176,/proc/cpuinfo,"CPU variant	: 0x0"
+BBBP,177,/proc/cpuinfo,"CPU part	: 0xd03"
+BBBP,178,/proc/cpuinfo,"CPU revision	: 4"
+BBBP,179,/proc/cpuinfo,""
+BBBP,180,/proc/cpuinfo,"processor	: 3"
+BBBP,181,/proc/cpuinfo,"model name	: ARMv7 Processor rev 4 (v7l)"
+BBBP,182,/proc/cpuinfo,"BogoMIPS	: 76.80"
+BBBP,183,/proc/cpuinfo,"Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 "
+BBBP,184,/proc/cpuinfo,"CPU implementer	: 0x41"
+BBBP,185,/proc/cpuinfo,"CPU architecture: 7"
+BBBP,186,/proc/cpuinfo,"CPU variant	: 0x0"
+BBBP,187,/proc/cpuinfo,"CPU part	: 0xd03"
+BBBP,188,/proc/cpuinfo,"CPU revision	: 4"
+BBBP,189,/proc/cpuinfo,""
+BBBP,190,/proc/cpuinfo,"Hardware	: BCM2835"
+BBBP,191,/proc/cpuinfo,"Revision	: a02082"
+BBBP,192,/proc/cpuinfo,"Serial		: 000000000da37c85"
+BBBP,193,/proc/cpuinfo,"Model		: Raspberry Pi 3 Model B Rev 1.2"
+BBBP,194,/proc/meminfo
+BBBP,195,/proc/meminfo,"MemTotal:         948296 kB"
+BBBP,196,/proc/meminfo,"MemFree:           45656 kB"
+BBBP,197,/proc/meminfo,"MemAvailable:     329176 kB"
+BBBP,198,/proc/meminfo,"Buffers:           47652 kB"
+BBBP,199,/proc/meminfo,"Cached:           322668 kB"
+BBBP,200,/proc/meminfo,"SwapCached:         1136 kB"
+BBBP,201,/proc/meminfo,"Active:           524484 kB"
+BBBP,202,/proc/meminfo,"Inactive:         282100 kB"
+BBBP,203,/proc/meminfo,"Active(anon):     331608 kB"
+BBBP,204,/proc/meminfo,"Inactive(anon):   158076 kB"
+BBBP,205,/proc/meminfo,"Active(file):     192876 kB"
+BBBP,206,/proc/meminfo,"Inactive(file):   124024 kB"
+BBBP,207,/proc/meminfo,"Unevictable:        7924 kB"
+BBBP,208,/proc/meminfo,"Mlocked:            7924 kB"
+BBBP,209,/proc/meminfo,"SwapTotal:        102396 kB"
+BBBP,210,/proc/meminfo,"SwapFree:          91900 kB"
+BBBP,211,/proc/meminfo,"Dirty:                40 kB"
+BBBP,212,/proc/meminfo,"Writeback:             0 kB"
+BBBP,213,/proc/meminfo,"AnonPages:        443628 kB"
+BBBP,214,/proc/meminfo,"Mapped:           233824 kB"
+BBBP,215,/proc/meminfo,"Shmem:             50908 kB"
+BBBP,216,/proc/meminfo,"Slab:              59404 kB"
+BBBP,217,/proc/meminfo,"SReclaimable:      23316 kB"
+BBBP,218,/proc/meminfo,"SUnreclaim:        36088 kB"
+BBBP,219,/proc/meminfo,"KernelStack:        2728 kB"
+BBBP,220,/proc/meminfo,"PageTables:        10188 kB"
+BBBP,221,/proc/meminfo,"NFS_Unstable:          0 kB"
+BBBP,222,/proc/meminfo,"Bounce:                0 kB"
+BBBP,223,/proc/meminfo,"WritebackTmp:          0 kB"
+BBBP,224,/proc/meminfo,"CommitLimit:      576544 kB"
+BBBP,225,/proc/meminfo,"Committed_AS:    2499428 kB"
+BBBP,226,/proc/meminfo,"VmallocTotal:    1114112 kB"
+BBBP,227,/proc/meminfo,"VmallocUsed:           0 kB"
+BBBP,228,/proc/meminfo,"VmallocChunk:          0 kB"
+BBBP,229,/proc/meminfo,"Percpu:              640 kB"
+BBBP,230,/proc/meminfo,"CmaTotal:           8192 kB"
+BBBP,231,/proc/meminfo,"CmaFree:            6020 kB"
+BBBP,232,/proc/stat
+BBBP,233,/proc/stat,"cpu  74858 0 13305 654870 3803 0 166 0 0 0"
+BBBP,234,/proc/stat,"cpu0 18143 0 3566 161518 974 0 161 0 0 0"
+BBBP,235,/proc/stat,"cpu1 18428 0 3332 164897 914 0 0 0 0 0"
+BBBP,236,/proc/stat,"cpu2 20662 0 3206 162503 885 0 4 0 0 0"
+BBBP,237,/proc/stat,"cpu3 17625 0 3201 165950 1029 0 1 0 0 0"
+BBBP,238,/proc/stat,"intr 2276008 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2070 3786 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 816 0 215 0 17665 0 0 0 0 0 0 0 0 0 0 0 1455570 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5136 4911 0 0 0 0 4115 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 360953 0 0 691"
+BBBP,239,/proc/stat,"ctxt 2496316"
+BBBP,240,/proc/stat,"btime 1586943989"
+BBBP,241,/proc/stat,"processes 5678"
+BBBP,242,/proc/stat,"procs_running 1"
+BBBP,243,/proc/stat,"procs_blocked 0"
+BBBP,244,/proc/stat,"softirq 505534 31826 163384 430 2707 0 0 51488 137225 0 118474"
+BBBP,245,/proc/version
+BBBP,246,/proc/version,"Linux version 4.19.97-v7+ (dom@buildbot) (gcc version 4.9.3 (crosstool-NG crosstool-ng-1.22.0-88-g8460611)) #1294 SMP Thu Jan 30 13:15:58 GMT 2020"
+BBBP,247,/proc/net/dev
+BBBP,248,/proc/net/dev,"Inter-|   Receive                                                |  Transmit"
+BBBP,249,/proc/net/dev," face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed"
+BBBP,250,/proc/net/dev," wlan0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0"
+BBBP,251,/proc/net/dev,"  eth0: 1005042    3064    0    0    0     0          0         0   377778    2050    0    0    0     0       0          0"
+BBBP,252,/proc/net/dev,"    lo:     384       7    0    0    0     0          0         0      384       7    0    0    0     0       0          0"
+BBBP,253,/proc/diskinfo
+BBBP,254,/proc/diskstats
+BBBP,255,/proc/diskstats,"   1       0 ram0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,256,/proc/diskstats,"   1       1 ram1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,257,/proc/diskstats,"   1       2 ram2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,258,/proc/diskstats,"   1       3 ram3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,259,/proc/diskstats,"   1       4 ram4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,260,/proc/diskstats,"   1       5 ram5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,261,/proc/diskstats,"   1       6 ram6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,262,/proc/diskstats,"   1       7 ram7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,263,/proc/diskstats,"   1       8 ram8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,264,/proc/diskstats,"   1       9 ram9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,265,/proc/diskstats,"   1      10 ram10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,266,/proc/diskstats,"   1      11 ram11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,267,/proc/diskstats,"   1      12 ram12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,268,/proc/diskstats,"   1      13 ram13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,269,/proc/diskstats,"   1      14 ram14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,270,/proc/diskstats,"   1      15 ram15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,271,/proc/diskstats,"   7       0 loop0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,272,/proc/diskstats,"   7       1 loop1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,273,/proc/diskstats,"   7       2 loop2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,274,/proc/diskstats,"   7       3 loop3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,275,/proc/diskstats,"   7       4 loop4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,276,/proc/diskstats,"   7       5 loop5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,277,/proc/diskstats,"   7       6 loop6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,278,/proc/diskstats,"   7       7 loop7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,279,/proc/diskstats," 179       0 mmcblk0 12671 12242 968258 71600 5063 7481 166338 163166 0 50060 79850 0 0 0 0"
+BBBP,280,/proc/diskstats," 179       1 mmcblk0p1 281 3950 21832 1273 2 0 2 108 0 960 1190 0 0 0 0"
+BBBP,281,/proc/diskstats," 179       2 mmcblk0p2 12370 8292 945370 70261 5061 7481 166336 163058 0 49870 79070 0 0 0 0"
+BBBP,282,/proc/diskstats,"   8       0 sda 274 14654 19125 1016 1 0 1 18 0 670 670 0 0 0 0"
+BBBP,283,/proc/diskstats,"   8       1 sda1 264 14654 19037 1006 1 0 1 18 0 660 660 0 0 0 0"
+BBBP,284,/sbin/multipath
+BBBP,285,/dev/mapper
+BBBP,286,/dev/mapper,"total 0"
+BBBP,287,/dev/mapper,"crw------- 1 root root 10, 236 Apr 15 11:46 control"
+BBBP,288,/dev/mpath
+BBBP,289,/dev/dm-*
+BBBP,290,/dev/md*
+BBBP,291,/dev/sd*
+BBBP,292,/dev/sd*,"brw-rw---- 1 root disk 8, 0 Apr 15 11:46 /dev/sda"
+BBBP,293,/dev/sd*,"brw-rw---- 1 root disk 8, 1 Apr 15 11:46 /dev/sda1"
+BBBP,294,/proc/partitions
+BBBP,295,/proc/partitions,"major minor  #blocks  name"
+BBBP,296,/proc/partitions,""
+BBBP,297,/proc/partitions,"   1        0       4096 ram0"
+BBBP,298,/proc/partitions,"   1        1       4096 ram1"
+BBBP,299,/proc/partitions,"   1        2       4096 ram2"
+BBBP,300,/proc/partitions,"   1        3       4096 ram3"
+BBBP,301,/proc/partitions,"   1        4       4096 ram4"
+BBBP,302,/proc/partitions,"   1        5       4096 ram5"
+BBBP,303,/proc/partitions,"   1        6       4096 ram6"
+BBBP,304,/proc/partitions,"   1        7       4096 ram7"
+BBBP,305,/proc/partitions,"   1        8       4096 ram8"
+BBBP,306,/proc/partitions,"   1        9       4096 ram9"
+BBBP,307,/proc/partitions,"   1       10       4096 ram10"
+BBBP,308,/proc/partitions,"   1       11       4096 ram11"
+BBBP,309,/proc/partitions,"   1       12       4096 ram12"
+BBBP,310,/proc/partitions,"   1       13       4096 ram13"
+BBBP,311,/proc/partitions,"   1       14       4096 ram14"
+BBBP,312,/proc/partitions,"   1       15       4096 ram15"
+BBBP,313,/proc/partitions," 179        0   31166976 mmcblk0"
+BBBP,314,/proc/partitions," 179        1     262144 mmcblk0p1"
+BBBP,315,/proc/partitions," 179        2   30900736 mmcblk0p2"
+BBBP,316,/proc/partitions,"   8        0   30326880 sda"
+BBBP,317,/proc/partitions,"   8        1   30326849 sda1"
+BBBP,318,/proc/1/stat
+BBBP,319,/proc/1/stat,"1 (systemd) S 0 1 1 0 -1 4194560 7310 54366 100 201 173 236 718 286 20 0 1 0 0 34574336 1984 4294967295 4509696 5616264 2125979376 0 0 0 671173123 4096 1260 1 0 0 17 1 0 0 108 0 0 5683376 5812880 16846848 2125979597 2125979615 2125979615 2125979633 0"
+BBBP,320,/proc/net/rpc/nfs
+BBBP,321,/proc/net/rpc/nfs,"net 0 0 0 0"
+BBBP,322,/proc/net/rpc/nfs,"rpc 0 0 0"
+BBBP,323,/proc/net/rpc/nfs,"proc2 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,324,/proc/net/rpc/nfs,"proc3 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,325,/proc/net/rpc/nfs,"proc4 62 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,326,/proc/net/rpc/nfsd
+BBBP,327,/proc/modules
+BBBP,328,/proc/modules,"binfmt_misc 20480 1 - Live 0x7f6e8000"
+BBBP,329,/proc/modules,"fuse 110592 3 - Live 0x7f6c2000"
+BBBP,330,/proc/modules,"rfcomm 49152 4 - Live 0x7f6af000"
+BBBP,331,/proc/modules,"bnep 20480 2 - Live 0x7f6a5000"
+BBBP,332,/proc/modules,"hci_uart 40960 1 - Live 0x7f695000"
+BBBP,333,/proc/modules,"btbcm 16384 1 hci_uart, Live 0x7f68e000"
+BBBP,334,/proc/modules,"serdev 20480 1 hci_uart, Live 0x7f683000"
+BBBP,335,/proc/modules,"bluetooth 389120 29 rfcomm,bnep,hci_uart,btbcm, Live 0x7f610000"
+BBBP,336,/proc/modules,"ecdh_generic 28672 1 bluetooth, Live 0x7f606000"
+BBBP,337,/proc/modules,"8021q 32768 0 - Live 0x7f5f8000"
+BBBP,338,/proc/modules,"garp 16384 1 8021q, Live 0x7f5f0000"
+BBBP,339,/proc/modules,"stp 16384 1 garp, Live 0x7f5e9000"
+BBBP,340,/proc/modules,"llc 16384 2 garp,stp, Live 0x7f5e0000"
+BBBP,341,/proc/modules,"brcmfmac 311296 0 - Live 0x7f51a000"
+BBBP,342,/proc/modules,"sg 28672 0 - Live 0x7f50e000"
+BBBP,343,/proc/modules,"brcmutil 16384 1 brcmfmac, Live 0x7f4fe000"
+BBBP,344,/proc/modules,"uas 24576 0 - Live 0x7f4f3000"
+BBBP,345,/proc/modules,"sha256_generic 20480 0 - Live 0x7f4ea000"
+BBBP,346,/proc/modules,"cfg80211 651264 1 brcmfmac, Live 0x7f33a000"
+BBBP,347,/proc/modules,"rfkill 28672 6 bluetooth,cfg80211, Live 0x7f320000"
+BBBP,348,/proc/modules,"bcm2835_codec 36864 0 - Live 0x7f311000 (C)"
+BBBP,349,/proc/modules,"bcm2835_v4l2 45056 0 - Live 0x7f300000 (C)"
+BBBP,350,/proc/modules,"v4l2_mem2mem 24576 1 bcm2835_codec, Live 0x7f2f5000"
+BBBP,351,/proc/modules,"snd_bcm2835 24576 2 - Live 0x7f2e9000 (C)"
+BBBP,352,/proc/modules,"raspberrypi_hwmon 16384 0 - Live 0x7f2e1000"
+BBBP,353,/proc/modules,"hwmon 16384 1 raspberrypi_hwmon, Live 0x7f2d8000"
+BBBP,354,/proc/modules,"snd_pcm 102400 1 snd_bcm2835, Live 0x7f2b3000"
+BBBP,355,/proc/modules,"bcm2835_mmal_vchiq 32768 2 bcm2835_codec,bcm2835_v4l2, Live 0x7f299000 (C)"
+BBBP,356,/proc/modules,"v4l2_common 16384 1 bcm2835_v4l2, Live 0x7f291000"
+BBBP,357,/proc/modules,"videobuf2_dma_contig 20480 1 bcm2835_codec, Live 0x7f288000"
+BBBP,358,/proc/modules,"snd_timer 32768 1 snd_pcm, Live 0x7f27a000"
+BBBP,359,/proc/modules,"videobuf2_vmalloc 16384 1 bcm2835_v4l2, Live 0x7f273000"
+BBBP,360,/proc/modules,"videobuf2_memops 16384 2 videobuf2_dma_contig,videobuf2_vmalloc, Live 0x7f265000"
+BBBP,361,/proc/modules,"videobuf2_v4l2 24576 3 bcm2835_codec,bcm2835_v4l2,v4l2_mem2mem, Live 0x7f24f000"
+BBBP,362,/proc/modules,"snd 73728 7 snd_bcm2835,snd_pcm,snd_timer, Live 0x7f233000"
+BBBP,363,/proc/modules,"videobuf2_common 45056 4 bcm2835_codec,v4l2_mem2mem,bcm2835_v4l2,videobuf2_v4l2, Live 0x7f20f000"
+BBBP,364,/proc/modules,"joydev 20480 0 - Live 0x7f205000"
+BBBP,365,/proc/modules,"videodev 200704 6 bcm2835_codec,v4l2_mem2mem,bcm2835_v4l2,v4l2_common,videobuf2_v4l2,videobuf2_common, Live 0x7f17b000"
+BBBP,366,/proc/modules,"media 36864 3 bcm2835_codec,v4l2_mem2mem,videodev, Live 0x7f165000"
+BBBP,367,/proc/modules,"vc_sm_cma 36864 5 bcm2835_mmal_vchiq, Live 0x7f14c000 (C)"
+BBBP,368,/proc/modules,"evdev 24576 13 - Live 0x7f12b000"
+BBBP,369,/proc/modules,"uio_pdrv_genirq 16384 0 - Live 0x7f100000"
+BBBP,370,/proc/modules,"uio 20480 1 uio_pdrv_genirq, Live 0x7f0cb000"
+BBBP,371,/proc/modules,"fixed 16384 0 - Live 0x7f0b4000"
+BBBP,372,/proc/modules,"i2c_dev 20480 0 - Live 0x7f0a6000"
+BBBP,373,/proc/modules,"ip_tables 24576 0 - Live 0x7f09b000"
+BBBP,374,/proc/modules,"x_tables 32768 1 ip_tables, Live 0x7f08c000"
+BBBP,375,/proc/modules,"ipv6 454656 50 [permanent], Live 0x7f000000"
+BBBP,376,ifconfig
+BBBP,377,ifconfig,"eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500"
+BBBP,378,ifconfig,"        inet 192.168.1.100  netmask 255.255.255.0  broadcast 192.168.1.255"
+BBBP,379,ifconfig,"        inet6 fe80::e9e3:cfe9:d386:7e4a  prefixlen 64  scopeid 0x20<link>"
+BBBP,380,ifconfig,"        inet6 2a02:8428:547:9a01:7bad:f131:342c:be3e  prefixlen 64  scopeid 0x0<global>"
+BBBP,381,ifconfig,"        ether b8:27:eb:a3:7c:85  txqueuelen 1000  (Ethernet)"
+BBBP,382,ifconfig,"        RX packets 3064  bytes 1005042 (981.4 KiB)"
+BBBP,383,ifconfig,"        RX errors 0  dropped 0  overruns 0  frame 0"
+BBBP,384,ifconfig,"        TX packets 2050  bytes 377778 (368.9 KiB)"
+BBBP,385,ifconfig,"        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0"
+BBBP,386,ifconfig,""
+BBBP,387,ifconfig,"lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536"
+BBBP,388,ifconfig,"        inet 127.0.0.1  netmask 255.0.0.0"
+BBBP,389,ifconfig,"        inet6 ::1  prefixlen 128  scopeid 0x10<host>"
+BBBP,390,ifconfig,"        loop  txqueuelen 1000  (Local Loopback)"
+BBBP,391,ifconfig,"        RX packets 7  bytes 384 (384.0 B)"
+BBBP,392,ifconfig,"        RX errors 0  dropped 0  overruns 0  frame 0"
+BBBP,393,ifconfig,"        TX packets 7  bytes 384 (384.0 B)"
+BBBP,394,ifconfig,"        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0"
+BBBP,395,ifconfig,""
+BBBP,396,/bin/df-m
+BBBP,397,/bin/df-m,"Filesystem     1M-blocks  Used Available Use% Mounted on"
+BBBP,398,/bin/df-m,"ddev/root          29643  8275     20080  30% /"
+BBBP,399,/bin/df-m,"devtmpfs             459     0       459   0% /dev"
+BBBP,400,/bin/df-m,"tmpfs                464    40       424   9% /dev/shm"
+BBBP,401,/bin/df-m,"tmpfs                464     7       457   2% /run"
+BBBP,402,/bin/df-m,"tmpfs                  5     1         5   1% /run/lock"
+BBBP,403,/bin/df-m,"tmpfs                464     0       464   0% /sys/fs/cgroup"
+BBBP,404,/bin/df-m,"ddev/mmcblk0p1       253    53       200  21% /boot"
+BBBP,405,/bin/df-m,"tmpfs                 93     1        93   1% /run/user/1000"
+BBBP,406,/bin/df-m,"ddev/sda1          29601 21814      7787  74% /media/pi/VERBATIM32G"
+BBBP,407,/bin/mount
+BBBP,408,/bin/mount,"ddev/mmcblk0p2 on / type ext4 (rw,noatime)"
+BBBP,409,/bin/mount,"devtmpfs on /dev type devtmpfs (rw,relatime,size=469540k,nr_inodes=117385,mode=755)"
+BBBP,410,/bin/mount,"sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)"
+BBBP,411,/bin/mount,"proc on /proc type proc (rw,relatime)"
+BBBP,412,/bin/mount,"tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)"
+BBBP,413,/bin/mount,"devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)"
+BBBP,414,/bin/mount,"tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)"
+BBBP,415,/bin/mount,"tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k)"
+BBBP,416,/bin/mount,"tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)"
+BBBP,417,/bin/mount,"cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)"
+BBBP,418,/bin/mount,"cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)"
+BBBP,419,/bin/mount,"bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)"
+BBBP,420,/bin/mount,"cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)"
+BBBP,421,/bin/mount,"cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)"
+BBBP,422,/bin/mount,"cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)"
+BBBP,423,/bin/mount,"cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)"
+BBBP,424,/bin/mount,"cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)"
+BBBP,425,/bin/mount,"cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)"
+BBBP,426,/bin/mount,"cgroup on /sys/fs/cgroup/net_cls type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls)"
+BBBP,427,/bin/mount,"cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)"
+BBBP,428,/bin/mount,"systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=28,pgrp=1,timeout=0,minproto=5,maxproto=5,direct)"
+BBBP,429,/bin/mount,"debugfs on /sys/kernel/debug type debugfs (rw,relatime)"
+BBBP,430,/bin/mount,"sunrpc on /run/rpc_pipefs type rpc_pipefs (rw,relatime)"
+BBBP,431,/bin/mount,"mqueue on /dev/mqueue type mqueue (rw,relatime)"
+BBBP,432,/bin/mount,"configfs on /sys/kernel/config type configfs (rw,relatime)"
+BBBP,433,/bin/mount,"ddev/mmcblk0p1 on /boot type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)"
+BBBP,434,/bin/mount,"tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=94828k,mode=700,uid=1000,gid=1000)"
+BBBP,435,/bin/mount,"gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)"
+BBBP,436,/bin/mount,"fusectl on /sys/fs/fuse/connections type fusectl (rw,relatime)"
+BBBP,437,/bin/mount,"ddev/sda1 on /media/pi/VERBATIM32G type vfat (rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,showexec,utf8,flush,errors=remount-ro,uhelper=udisks2)"
+BBBP,438,/bin/mount,"binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,relatime)"
+BBBP,439,/etc/fstab
+BBBP,440,/etc/fstab,"proc            /proc           proc    defaults          0       0"
+BBBP,441,/etc/fstab,"PARTUUID=97709164-01  /boot           vfat    defaults          0       2"
+BBBP,442,/etc/fstab,"PARTUUID=97709164-02  /               ext4    defaults,noatime  0       1"
+BBBP,443,/etc/fstab,"# a swapfile is not a swap partition, no line here"
+BBBP,444,/etc/fstab,"#   use  dphys-swapfile swap[on|off]  for that"
+BBBP,445,netstat -r
+BBBP,446,netstat -r,"Kernel IP routing table"
+BBBP,447,netstat -r,"Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface"
+BBBP,448,netstat -r,"default         box             0.0.0.0         UG        0 0          0 eth0"
+BBBP,449,netstat -r,"192.168.1.0     0.0.0.0         255.255.255.0   U         0 0          0 eth0"
+BBBP,450,uptime
+BBBP,451,uptime," 12:17:57 up 31 min,  2 users,  load average: 0.51, 0.51, 0.46"
+BBBP,452,getconf PAGESIZE
+BBBP,453,getconf PAGESIZE,"4096"
+ZZZZ,T0001,12:17:58,15-APR-2020
+CPU001,T0001,0.8,1.6,0.0,97.5,0.0
+CPU002,T0001,7.3,5.6,0.0,87.1,0.0
+CPU003,T0001,4.7,8.6,0.8,85.9,0.0
+CPU004,T0001,4.7,6.2,0.0,89.1,0.0
+CPU_ALL,T0001,4.4,5.6,0.0,90.0,0.0,,4
+MEM,T0001,926.1,-0.0,-0.0,100.0,44.2,-0.0,-0.0,89.7,-0.0,315.1,512.0,-1.0,46.5,1.1,275.5
+VM,Paging and Virtual Memory,nr_dirty,nr_writeback,nr_unstable,nr_page_table_pages,nr_mapped,nr_slab,pgpgin,pgpgout,pswpin,pswpout,pgfree,pgactivate,pgdeactivate,pgfault,pgmajfault,pginodesteal,slabs_scanned,kswapd_steal,kswapd_inodesteal,pageoutrun,allocstall,pgrotated,pgalloc_high,pgalloc_normal,pgalloc_dma,pgrefill_high,pgrefill_normal,pgrefill_dma,pgsteal_high,pgsteal_normal,pgsteal_dma,pgscan_kswapd_high,pgscan_kswapd_normal,pgscan_kswapd_dma,pgscan_direct_high,pgscan_direct_normal,pgscan_direct_dma
+VM,T0001,18,0,0,2537,58388,-1,8,0,0,0,5591,10,0,7206,1,0,0,0,0,0,0,0,0,5503,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0001,1,0,0.0,-1.0,-1.0,-1.0,0.0,-1.0,-1.0,-1.0
+NET,T0001,0.0,0.1,0.0,0.0,0.1,0.0
+NETPACKET,T0001,0.0,0.6,0.0,0.0,0.6,0.0
+JFSFILE,T0001,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0001,0.0,0.0,0.0,0.0,0.0
+DISKREAD,T0001,5.1,0.0,5.1,0.0,0.0
+DISKWRITE,T0001,0.0,0.0,0.0,0.0,0.0
+DISKXFER,T0001,1.3,0.0,1.3,0.0,0.0
+DISKBSIZE,T0001,4.0,0.0,4.0,0.0,0.0
+ZZZZ,T0002,12:17:59,15-APR-2020
+CPU001,T0002,2.1,1.1,0.0,96.8,0.0
+CPU002,T0002,5.8,1.9,0.0,92.2,0.0
+CPU003,T0002,0.0,0.0,0.0,100.0,0.0
+CPU004,T0002,3.0,2.0,0.0,95.0,0.0
+CPU_ALL,T0002,2.8,1.3,0.0,95.9,0.0,,4
+MEM,T0002,926.1,-0.0,-0.0,100.0,44.3,-0.0,-0.0,89.7,-0.0,315.1,512.0,-1.0,46.5,1.1,275.5
+VM,T0002,18,0,0,2536,58388,-1,0,0,0,0,5,0,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0002,2,0,1129.3,-1.0,-1.0,-1.0,0.0,-1.0,-1.0,-1.0
+NET,T0002,0.0,0.1,0.0,0.0,0.0,0.0
+NETPACKET,T0002,0.0,2.0,0.0,0.0,0.0,0.0
+JFSFILE,T0002,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0002,0.0,0.0,0.0,0.0,0.0
+DISKREAD,T0002,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0002,0.0,0.0,0.0,0.0,0.0
+DISKXFER,T0002,0.0,0.0,0.0,0.0,0.0
+DISKBSIZE,T0002,0.0,0.0,0.0,0.0,0.0
+ZZZZ,T0003,12:18:00,15-APR-2020
+CPU001,T0003,8.6,2.2,0.0,89.2,0.0
+CPU002,T0003,1.0,2.0,0.0,97.0,0.0
+CPU003,T0003,1.1,1.1,0.0,97.9,0.0
+CPU004,T0003,4.0,3.0,0.0,93.0,0.0
+CPU_ALL,T0003,3.6,2.1,0.0,94.3,0.0,,4
+MEM,T0003,926.1,-0.0,-0.0,100.0,44.3,-0.0,-0.0,89.7,-0.0,315.1,512.0,-1.0,46.5,1.1,275.5
+VM,T0003,0,0,0,2531,58398,-1,0,72,0,0,205,0,0,446,0,0,0,0,0,0,0,0,0,206,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0003,1,0,1523.9,-1.0,-1.0,-1.0,3.0,-1.0,-1.0,-1.0
+NET,T0003,0.0,0.1,0.0,0.0,0.1,0.0
+NETPACKET,T0003,0.0,1.0,0.0,0.0,1.0,0.0
+JFSFILE,T0003,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0003,1.0,0.0,1.0,0.0,0.0
+DISKREAD,T0003,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0003,71.7,0.0,71.7,0.0,0.0
+DISKXFER,T0003,9.0,0.0,9.0,0.0,0.0
+DISKBSIZE,T0003,8.0,0.0,8.0,0.0,0.0
+ZZZZ,T0004,12:18:01,15-APR-2020
+CPU001,T0004,4.1,1.0,0.0,94.8,0.0
+CPU002,T0004,2.0,1.0,0.0,97.0,0.0
+CPU003,T0004,10.1,1.0,0.0,88.9,0.0
+CPU004,T0004,11.1,3.0,0.0,85.9,0.0
+CPU_ALL,T0004,6.8,1.5,0.0,91.7,0.0,,4
+MEM,T0004,926.1,-0.0,-0.0,100.0,43.6,-0.0,-0.0,89.7,-0.0,315.1,512.3,-1.0,46.5,1.1,275.5
+VM,T0004,7,0,0,2531,58398,-1,0,0,0,0,3046,0,0,3152,0,0,0,0,0,0,0,0,0,3084,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0004,1,0,1344.5,-1.0,-1.0,-1.0,3.0,-1.0,-1.0,-1.0
+NET,T0004,0.0,0.2,0.0,0.0,0.1,0.0
+NETPACKET,T0004,0.0,2.0,0.0,0.0,1.0,0.0
+JFSFILE,T0004,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0004,0.0,0.0,0.0,0.0,0.0
+DISKREAD,T0004,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0004,0.0,0.0,0.0,0.0,0.0
+DISKXFER,T0004,0.0,0.0,0.0,0.0,0.0
+DISKBSIZE,T0004,0.0,0.0,0.0,0.0,0.0
+ZZZZ,T0005,12:18:02,15-APR-2020
+CPU001,T0005,3.1,1.0,0.0,95.8,0.0
+CPU002,T0005,2.1,1.0,0.0,96.9,0.0
+CPU003,T0005,3.0,0.0,0.0,97.0,0.0
+CPU004,T0005,0.0,0.0,0.0,100.0,0.0
+CPU_ALL,T0005,2.0,0.5,0.3,97.2,0.0,,4
+MEM,T0005,926.1,-0.0,-0.0,100.0,43.5,-0.0,-0.0,89.7,-0.0,315.1,512.2,-1.0,46.5,1.1,275.5
+VM,T0005,8,0,0,2531,58398,-1,0,60,0,0,68,0,0,71,0,0,0,0,0,0,0,0,0,73,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0005,1,0,1025.7,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,-1.0
+NET,T0005,0.0,0.0,0.0,0.0,0.0,0.0
+NETPACKET,T0005,0.0,1.0,0.0,0.0,0.0,0.0
+JFSFILE,T0005,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0005,1.0,0.0,1.0,0.0,0.0
+DISKREAD,T0005,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0005,59.9,0.0,59.9,0.0,0.0
+DISKXFER,T0005,2.0,0.0,2.0,0.0,0.0
+DISKBSIZE,T0005,30.0,0.0,30.0,0.0,0.0
+ZZZZ,T0006,12:18:03,15-APR-2020
+CPU001,T0006,0.0,2.0,0.0,98.0,0.0
+CPU002,T0006,5.8,3.9,0.0,90.3,0.0
+CPU003,T0006,2.0,2.0,0.0,96.0,0.0
+CPU004,T0006,1.0,0.0,0.0,99.0,0.0
+CPU_ALL,T0006,2.2,2.0,0.0,95.8,0.0,,4
+MEM,T0006,926.1,-0.0,-0.0,100.0,43.8,-0.0,-0.0,89.7,-0.0,315.1,512.2,-1.0,46.5,1.1,275.5
+VM,T0006,21,0,0,2531,58398,-1,0,0,0,0,204,1,0,395,0,0,0,0,0,0,0,0,0,203,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0006,1,0,1131.9,-1.0,-1.0,-1.0,3.0,-1.0,-1.0,-1.0
+NET,T0006,0.0,0.1,0.0,0.0,0.0,0.0
+NETPACKET,T0006,0.0,2.0,0.0,0.0,1.0,0.0
+JFSFILE,T0006,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0006,0.0,0.0,0.0,0.0,0.0
+DISKREAD,T0006,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0006,0.0,0.0,0.0,0.0,0.0
+DISKXFER,T0006,0.0,0.0,0.0,0.0,0.0
+DISKBSIZE,T0006,0.0,0.0,0.0,0.0,0.0
+ZZZZ,T0007,12:18:04,15-APR-2020
+CPU001,T0007,1.0,1.0,0.0,98.0,0.0
+CPU002,T0007,0.0,1.0,0.0,99.0,0.0
+CPU003,T0007,6.9,3.9,0.0,89.2,0.0
+CPU004,T0007,0.0,1.0,0.0,99.0,0.0
+CPU_ALL,T0007,2.0,1.7,0.0,96.3,0.0,,4
+MEM,T0007,926.1,-0.0,-0.0,100.0,44.0,-0.0,-0.0,89.7,-0.0,315.1,512.2,-1.0,46.5,1.1,275.5
+VM,T0007,21,0,0,2527,58398,-1,0,0,0,0,198,0,0,385,0,0,0,0,0,0,0,0,0,203,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0007,1,0,912.3,-1.0,-1.0,-1.0,3.0,-1.0,-1.0,-1.0
+NET,T0007,0.0,0.0,0.0,0.0,0.0,0.0
+NETPACKET,T0007,0.0,1.0,0.0,0.0,0.0,0.0
+JFSFILE,T0007,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0007,0.0,0.0,0.0,0.0,0.0
+DISKREAD,T0007,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0007,0.0,0.0,0.0,0.0,0.0
+DISKXFER,T0007,0.0,0.0,0.0,0.0,0.0
+DISKBSIZE,T0007,0.0,0.0,0.0,0.0,0.0
+ZZZZ,T0008,12:18:05,15-APR-2020
+CPU001,T0008,0.0,0.0,0.0,100.0,0.0
+CPU002,T0008,0.0,0.0,0.0,100.0,0.0
+CPU003,T0008,7.1,1.0,0.0,91.9,0.0
+CPU004,T0008,0.0,0.0,0.0,100.0,0.0
+CPU_ALL,T0008,1.8,0.3,0.0,98.0,0.0,,4
+MEM,T0008,926.1,-0.0,-0.0,100.0,44.0,-0.0,-0.0,89.7,-0.0,315.1,512.2,-1.0,46.5,1.1,275.5
+VM,T0008,22,0,0,2532,58398,-1,0,0,0,0,5,0,0,4,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0008,1,0,829.5,-1.0,-1.0,-1.0,0.0,-1.0,-1.0,-1.0
+NET,T0008,0.0,0.1,0.0,0.0,0.0,0.0
+NETPACKET,T0008,0.0,1.0,0.0,0.0,0.0,0.0
+JFSFILE,T0008,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0008,0.0,0.0,0.0,0.0,0.0
+DISKREAD,T0008,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0008,0.0,0.0,0.0,0.0,0.0
+DISKXFER,T0008,0.0,0.0,0.0,0.0,0.0
+DISKBSIZE,T0008,0.0,0.0,0.0,0.0,0.0
+ZZZZ,T0009,12:18:06,15-APR-2020
+CPU001,T0009,1.0,0.0,0.0,99.0,0.0
+CPU002,T0009,0.0,0.0,0.0,100.0,0.0
+CPU003,T0009,6.2,1.0,0.0,92.8,0.0
+CPU004,T0009,0.0,1.0,0.0,99.0,0.0
+CPU_ALL,T0009,1.8,0.5,0.0,97.7,0.0,,4
+MEM,T0009,926.1,-0.0,-0.0,100.0,44.0,-0.0,-0.0,89.7,-0.0,315.1,512.2,-1.0,46.5,1.1,275.5
+VM,T0009,5,0,0,2537,58398,-1,0,76,0,0,203,0,0,391,0,0,0,0,0,0,0,0,0,204,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0009,2,0,1042.7,-1.0,-1.0,-1.0,3.0,-1.0,-1.0,-1.0
+NET,T0009,0.0,0.0,0.0,0.0,0.0,0.0
+NETPACKET,T0009,0.0,0.0,0.0,0.0,0.0,0.0
+JFSFILE,T0009,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0009,2.0,0.0,2.0,0.0,0.0
+DISKREAD,T0009,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0009,75.7,0.0,75.7,0.0,0.0
+DISKXFER,T0009,14.9,0.0,14.9,0.0,0.0
+DISKBSIZE,T0009,5.1,0.0,5.1,0.0,0.0
+ZZZZ,T0010,12:18:07,15-APR-2020
+CPU001,T0010,0.0,1.0,0.0,99.0,0.0
+CPU002,T0010,2.0,1.0,0.0,97.0,0.0
+CPU003,T0010,6.1,3.1,0.0,90.8,0.0
+CPU004,T0010,2.0,0.0,0.0,98.0,0.0
+CPU_ALL,T0010,2.5,1.3,0.0,96.2,0.0,,4
+MEM,T0010,926.1,-0.0,-0.0,100.0,44.0,-0.0,-0.0,89.7,-0.0,315.1,512.2,-1.0,46.5,1.1,275.5
+VM,T0010,7,0,0,2537,58398,-1,0,20,0,0,278,0,0,455,0,0,0,0,0,0,0,0,0,274,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0010,3,0,954.1,-1.0,-1.0,-1.0,4.0,-1.0,-1.0,-1.0
+NET,T0010,0.0,0.0,0.0,0.0,0.0,0.0
+NETPACKET,T0010,0.0,1.0,0.0,0.0,0.0,0.0
+JFSFILE,T0010,27.9,0.0,1.5,20.7,73.7
+DISKBUSY,T0010,0.0,0.0,1.0,0.0,0.0
+DISKREAD,T0010,0.0,0.0,0.0,0.0,0.0
+DISKWRITE,T0010,0.0,0.0,0.0,0.0,0.0
+DISKXFER,T0010,0.0,0.0,0.0,0.0,0.0
+DISKBSIZE,T0010,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,19 @@
+AAA,progname,nmon
+AAA,command,nmon -F test.nmon -s 1 -c 120 
+AAA,version,13g
+AAA,disks_per_line,150
+AAA,max_disks,256,set by -d option
+AAA,disks,12,
+AAA,host,the-gibson
+AAA,user,madmaze
+AAA,OS,Linux,3.2.0-34-generic,#53-Ubuntu SMP Thu Nov 15 10:48:16 UTC 2012,x86_64
+AAA,runname,the-gibson
+AAA,time,13:18.31
+AAA,date,07-DEC-2012
+AAA,interval,1
+AAA,snapshots,120
+AAA,cpus,6,6
+AAA,proc_stat_variables,8
+AAA,note0, Warning - use the UNIX sort command to order this file before loading into a spreadsheet
+AAA,note1, The First Column is simply to get the output sorted in the right order
+AAA,note2, The T0001-T9999 column is a snapshot number. To work out the actual time; see the ZZZ section at the end
